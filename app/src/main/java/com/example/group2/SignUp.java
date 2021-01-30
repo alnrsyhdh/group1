@@ -9,11 +9,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-    private EditText userName, userPassword;
-    private Button loginButton;
-    private TextView userSignUp;
+public class SignUp extends AppCompatActivity {
 
+    private EditText userName, userEmail, userPhoneNumber, userPassword;
+    private Button signupButton;
+    private TextView userLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,8 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         setupUIViews();
 
-
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validate()) {
@@ -31,11 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        userSignUp.setOnClickListener(new View.OnClickListener() {
+        userLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivities(new Intent(SignUp.this, MainActivity.class));
-
+                startActivity(new Intent(SignUp.this, MainActivity.class));
             }
         });
 
@@ -43,24 +41,26 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupUIViews() {
         userName = (EditText) findViewById(R.id.pt_name);
+        userEmail = (EditText) findViewById(R.id.email);
+        userPhoneNumber = (EditText) findViewById(R.id.Nophone);
         userPassword = (EditText) findViewById(R.id.password_signup);
-        loginButton = (Button) findViewById(R.id.bt_login);
-        userSignUp = (TextView) findViewById(R.id.tv_signup);
+        signupButton = (Button) findViewById(R.id.bt_signup);
+        userLogin = (TextView) findViewById(R.id.tv_backtologin);
     }
 
     private Boolean validate() {
         Boolean result = false;
         String name = userName.getText().toString();
+        String email = userEmail.getText().toString();
+        String noPhone = userPhoneNumber.getText().toString();
         String password = userPassword.getText().toString();
 
-        if (name.isEmpty() && password.isEmpty()) {
+        if (name.isEmpty() && email.isEmpty() && noPhone.isEmpty() && password.isEmpty()) {
             Toast.makeText(this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
         } else {
             result = true;
         }
 
         return result;
-
-
     }
 }
