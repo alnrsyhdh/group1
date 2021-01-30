@@ -34,8 +34,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="123dp"
+        android:layout_height="44dp"
         android:layout_marginBottom="456dp"
         android:fontFamily="serif"
         android:text="+ edit profile"
