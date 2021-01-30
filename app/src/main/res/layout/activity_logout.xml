@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/iv_exit"
         android:layout_width="336dp"
-        android:layout_height="177dp"
+        android:layout_height="173dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
