@@ -175,8 +175,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="125dp"
-        android:layout_height="39dp"
+        android:layout_width="136dp"
+        android:layout_height="49dp"
         android:fontFamily="@font/abril_fatface"
         android:text="Logout"
         android:textSize="18sp"
@@ -190,8 +190,8 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="244dp"
-        android:layout_height="54dp"
+        android:layout_width="256dp"
+        android:layout_height="62dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Your Name"
