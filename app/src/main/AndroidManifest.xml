@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/iconfr"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group2">
-        <activity android:name=".SignUp"></activity>
+        <activity android:name=".Selection"></activity>
+        <activity android:name=".SignUp" />
         <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

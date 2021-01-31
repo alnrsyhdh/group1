@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C7C9CC"
+    android:padding="16dp"
+    tools:context=".Selection">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="SELECT"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <TextView
+        android:id="@+id/tv_descr"
+        android:layout_width="306dp"
+        android:layout_height="40dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Please select which method would you like to receive your verification code."
+        android:textColor="#80000000"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_sms"
+        android:layout_width="323dp"
+        android:layout_height="67dp"
+        android:background="@drawable/round_border_sms"
+        android:backgroundTint="@color/black"
+        android:drawableStart="@drawable/ic_white_iphone"
+        android:drawablePadding="16dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="16dp"
+        android:text="Send an SMS message"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_descr"
+        app:layout_constraintVertical_bias="0.237" />
+
+    <Button
+        android:id="@+id/btn_email"
+        android:layout_width="323dp"
+        android:layout_height="67dp"
+        android:background="@drawable/round_border_sms"
+        android:backgroundTint="@color/black"
+        android:drawableStart="@drawable/ic_white_email"
+        android:drawablePadding="16dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="16dp"
+        android:text="SEND AN EMAIL"
+        android:textColor="#C7C9CC"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sms"
+        app:layout_constraintVertical_bias="0.119" />
+
+</android.support.constraint.ConstraintLayout>
