@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/iconfr"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group2">
-        <activity android:name=".CodeVerify"></activity>
+        <activity android:name=".PasswordUpdated"></activity>
+        <activity android:name=".NewCredentials" />
+        <activity android:name=".CodeVerify" />
         <activity android:name=".Selection" />
         <activity android:name=".SignUp" />
         <activity android:name=".Splashscreen">
