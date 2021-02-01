@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView userSignUp;
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
+    private int counter = 5;
+    private TextView Info;
 
 
     @Override
@@ -61,28 +63,37 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupUIViews() {
-        userEmail = (EditText) findViewById(R.id.pt_name);
+        userEmail = (EditText) findViewById(R.id.email);
         userPassword = (EditText) findViewById(R.id.password_signup);
         loginButton = (Button) findViewById(R.id.bt_login);
         userSignUp = (TextView) findViewById(R.id.tv_signup);
+        Info = (TextView) findViewById(R.id.tvInfo);
+        Info.setText("No of attempts remaining: 5");
     }
 
 
 
     private void validate(String userEmail, String userPassword){
 
-        progressDialog.setMessage("Hello World");
+        progressDialog.setMessage("Redirecting....");
         progressDialog.show();
 
-        firebaseAuth.createUserWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
-                    //Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(MainActivity.this, viewProfile.class));
                     checkEmailVerification();
                 }else{
                     Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                    counter--;
+                    Info.setText("No of attempts remaining:" + counter);
+                    progressDialog.dismiss();
+                    if(counter == 0){
+                        loginButton.setEnabled(false);
+                    }
                 }
             }
         });

@@ -1,15 +1,11 @@
 package com.example.group2;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ListView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -25,7 +21,7 @@ public class viewProfile extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
-        logout = (Button)findViewById(R.id.button);
+        logout = (Button)findViewById(R.id.btn_hmpg_logout);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

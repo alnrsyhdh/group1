@@ -232,8 +232,8 @@
             android:layout_height="53dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="45dp"
-            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="8dp"
             android:fontFamily="serif"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -247,7 +247,7 @@
     </RelativeLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_hmpg_logout"
         android:layout_width="136dp"
         android:layout_height="53dp"
         android:background="@drawable/rounded_button"
