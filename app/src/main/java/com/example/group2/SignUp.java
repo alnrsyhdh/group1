@@ -1,7 +1,8 @@
 package com.example.group2;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,11 +10,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
 public class SignUp extends AppCompatActivity {
 
     private EditText userName, userEmail, userPhoneNumber, userPassword;
     private Button signupButton;
     private TextView userLogin;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +28,31 @@ public class SignUp extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
         setupUIViews();
 
+        firebaseAuth = FirebaseAuth.getInstance();
+
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (validate()) {
-                    //upload data to database
+                    if (validate()) {
+                        String user_name = userName.getText().toString().trim();
+                        String user_email = userEmail.getText().toString().trim();
+                        String user_password = userPassword.getText().toString().trim();
+                        String user_phone_number = userPhoneNumber.getText().toString().trim();
+
+                        firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(SignUp.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(SignUp.this, MainActivity.class));
+                                }else{
+                                    Toast.makeText(SignUp.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                                }
+
+                            }
+                        });
+                    }
                 }
 
             }

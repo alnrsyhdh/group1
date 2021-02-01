@@ -1,13 +1,11 @@
 package com.example.group2;
 
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 import android.os.Bundle;
 
 
 public class viewProfile extends AppCompatActivity {
-
-
 
 
     @Override
