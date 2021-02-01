@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <array name="preloaded_fonts" translatable="false">
-        <item>@font/abril_fatface</item>
-        <item>@font/caveat_bold</item>
-        <item>@font/covered_by_your_grace</item>
-        <item>@font/paprika</item>
-    </array>
-</resources>
