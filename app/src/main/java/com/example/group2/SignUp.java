@@ -70,7 +70,7 @@ public class SignUp extends AppCompatActivity {
 
     private void setupUIViews() {
         userName = (EditText) findViewById(R.id.pt_name);
-        userEmail = (EditText) findViewById(R.id.email);
+        userEmail = (EditText) findViewById(R.id.email_signUp);
         userPassword = (EditText) findViewById(R.id.password_signup);
         signupButton = (Button) findViewById(R.id.bt_signup);
         userLogin = (TextView) findViewById(R.id.tv_backtologin);

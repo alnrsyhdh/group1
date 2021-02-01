@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/email_signUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -59,7 +59,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pt_name"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.007" />
 
     <EditText
         android:id="@+id/password_signup"
@@ -67,6 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
+        android:layout_marginBottom="308dp"
         android:background="@drawable/round_borderline"
         android:drawableStart="@drawable/ic_baseline_lock_24"
         android:ems="10"
@@ -77,8 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintTop_toBottomOf="@+id/email_signUp" />
 
     <Button
         android:id="@+id/bt_signup"

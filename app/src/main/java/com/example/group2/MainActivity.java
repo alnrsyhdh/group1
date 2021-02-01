@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupUIViews() {
         userEmail = (EditText) findViewById(R.id.email);
-        userPassword = (EditText) findViewById(R.id.password_signup);
+        userPassword = (EditText) findViewById(R.id.password);
         loginButton = (Button) findViewById(R.id.bt_login);
         userSignUp = (TextView) findViewById(R.id.tv_signup);
         Info = (TextView) findViewById(R.id.tvInfo);
