@@ -33,7 +33,6 @@ public class viewProfile extends AppCompatActivity {
                 firebaseAuth.signOut();
                 finish();
                 startActivity(new Intent(viewProfile.this, MainActivity.class));
-
             }
         });
 
