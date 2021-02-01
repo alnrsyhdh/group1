@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.112" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_confirmation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
@@ -56,6 +56,7 @@
         android:id="@+id/btn_logout"
         android:layout_width="323dp"
         android:layout_height="67dp"
+        android:layout_marginBottom="124dp"
         android:background="@drawable/round_border"
         android:backgroundTint="@color/black"
         android:fontFamily="sans-serif-black"
@@ -67,15 +68,16 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email"
         app:layout_constraintVertical_bias="0.55" />
 
     <Button
         android:id="@+id/btn_undo"
         android:layout_width="323dp"
         android:layout_height="67dp"
+        android:layout_marginBottom="216dp"
         android:background="@drawable/round_border"
         android:backgroundTint="@color/black"
         android:fontFamily="sans-serif-black"
@@ -87,9 +89,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email"
         app:layout_constraintVertical_bias="0.195" />
 
     <ImageButton

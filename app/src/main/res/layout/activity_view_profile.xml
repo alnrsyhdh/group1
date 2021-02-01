@@ -28,37 +28,36 @@
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.111"
+        app:layout_constraintVertical_bias="0.09"
         app:srcCompat="@drawable/girl_icon_profpic" />
 
-
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tv_email"
         android:layout_width="185dp"
         android:layout_height="30dp"
-        android:text="USERNAME"
+        android:text="gmail.com"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:textStyle="italic"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_propic"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/tv_pswd"
         android:layout_width="163dp"
         android:layout_height="27dp"
-        android:text="**********01@gmail.com"
+        android:text="change password>"
         android:textColor="#FFFFFF"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.38"
         app:layout_constraintStart_toEndOf="@+id/iv_propic"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_email"
+        app:layout_constraintVertical_bias="0.019" />
 
     <Button
         android:id="@+id/button2"
@@ -75,7 +74,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toEndOf="@+id/iv_propic"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pswd"
         app:layout_constraintVertical_bias="0.042" />
 
     <RelativeLayout
