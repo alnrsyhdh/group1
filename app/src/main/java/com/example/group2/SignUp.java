@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUp extends AppCompatActivity {
 
-    private EditText userName, userEmail, userPhoneNumber, userPassword;
+    private EditText userName, userEmail, userPassword;
     private Button signupButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
@@ -38,7 +38,6 @@ public class SignUp extends AppCompatActivity {
                         String user_name = userName.getText().toString().trim();
                         String user_email = userEmail.getText().toString().trim();
                         String user_password = userPassword.getText().toString().trim();
-                        String user_phone_number = userPhoneNumber.getText().toString().trim();
 
                         firebaseAuth.createUserWithEmailAndPassword(user_email, user_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
@@ -69,7 +68,6 @@ public class SignUp extends AppCompatActivity {
     private void setupUIViews() {
         userName = (EditText) findViewById(R.id.pt_name);
         userEmail = (EditText) findViewById(R.id.email);
-        userPhoneNumber = (EditText) findViewById(R.id.Nophone);
         userPassword = (EditText) findViewById(R.id.password_signup);
         signupButton = (Button) findViewById(R.id.bt_signup);
         userLogin = (TextView) findViewById(R.id.tv_backtologin);
@@ -79,10 +77,9 @@ public class SignUp extends AppCompatActivity {
         Boolean result = false;
         String name = userName.getText().toString();
         String email = userEmail.getText().toString();
-        String noPhone = userPhoneNumber.getText().toString();
         String password = userPassword.getText().toString();
 
-        if (name.isEmpty() && email.isEmpty() && noPhone.isEmpty() && password.isEmpty()) {
+        if (name.isEmpty() && email.isEmpty() && password.isEmpty()) {
             Toast.makeText(this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
         } else {
             result = true;

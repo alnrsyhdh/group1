@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/left_arrow" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/iv_propic"
         android:layout_width="140dp"
         android:layout_height="166dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,10 +42,9 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.878"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_propic"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.107" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <TextView
         android:id="@+id/textView5"
@@ -56,15 +55,15 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/iv_propic"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.017" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="138dp"
-        android:layout_height="50dp"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
         android:background="@drawable/rounded_button"
         android:fontFamily="serif"
         android:text="+ CHANGE PROFILE PICTURE"
@@ -74,10 +73,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.767"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toEndOf="@+id/iv_propic"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.024" />
+        app:layout_constraintVertical_bias="0.042" />
 
     <RelativeLayout
         android:id="@+id/image_btn"
@@ -106,9 +105,9 @@
             android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="67dp"
-            android:layout_marginEnd="63dp"
-            android:layout_marginBottom="23dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="21dp"
             android:layout_toEndOf="@+id/image"
             android:fontFamily="serif"
             android:paddingStart="20dp"
@@ -149,8 +148,8 @@
             android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="78dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="113dp"
+            android:layout_marginBottom="21dp"
             android:fontFamily="serif"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -191,8 +190,8 @@
             android:layout_height="53dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="serif"
             android:paddingStart="20dp"
             android:paddingEnd="20dp"
@@ -233,7 +232,7 @@
             android:layout_height="53dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="22dp"
+            android:layout_marginEnd="45dp"
             android:layout_marginBottom="6dp"
             android:fontFamily="serif"
             android:paddingStart="20dp"
