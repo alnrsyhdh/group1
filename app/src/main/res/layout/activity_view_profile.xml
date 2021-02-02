@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C7C9CC"
+    tools:context=".viewProfile">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="27dp"
+        android:layout_height="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/left_arrow" />
+
+    <ImageView
+        android:id="@+id/iv_propic"
+        android:layout_width="140dp"
+        android:layout_height="166dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09"
+        app:srcCompat="@drawable/girl_icon_profpic" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="185dp"
+        android:layout_height="30dp"
+        android:text="gmail.com"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_propic"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/tv_pswd"
+        android:layout_width="163dp"
+        android:layout_height="27dp"
+        android:text="change password>"
+        android:textColor="#FFFFFF"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/iv_propic"
+        app:layout_constraintTop_toBottomOf="@+id/tv_email"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="140dp"
+        android:layout_height="55dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="serif"
+        android:text="+ CHANGE PROFILE PICTURE"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toEndOf="@+id/iv_propic"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pswd"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <RelativeLayout
+        android:id="@+id/image_btn"
+        android:layout_width="363dp"
+        android:layout_height="79dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/imagebutton_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintVertical_bias="0.059">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="74dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/mylikes" />
+
+        <TextView
+            android:layout_width="157dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="108dp"
+            android:layout_marginBottom="21dp"
+            android:layout_toEndOf="@+id/image"
+            android:fontFamily="serif"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="MY LIKES"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/image_btn2"
+        android:layout_width="363dp"
+        android:layout_height="79dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/imagebutton_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_btn"
+        app:layout_constraintVertical_bias="0.049">
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="74dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/favorites" />
+
+        <TextView
+            android:layout_width="157dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="113dp"
+            android:layout_marginBottom="21dp"
+            android:fontFamily="serif"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="WISHLIST"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_btn3"
+        android:layout_width="363dp"
+        android:layout_height="79dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/imagebutton_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_btn2"
+        app:layout_constraintVertical_bias="0.045">
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="74dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/order" />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="53dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="41dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="serif"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="ORDER HISTORY"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_btn4"
+        android:layout_width="363dp"
+        android:layout_height="79dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/imagebutton_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_btn3"
+        app:layout_constraintVertical_bias="0.146">
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="74dp"
+            android:layout_height="47dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="14dp"
+            android:src="@drawable/rview" />
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="53dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="49dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="serif"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="RECENT VIEWS"
+            android:textAllCaps="false"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_hmpg_logout"
+        android:layout_width="136dp"
+        android:layout_height="53dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="serif"
+        android:text="LOGOUT"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_btn4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
