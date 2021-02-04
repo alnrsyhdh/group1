@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,13 +16,17 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity {
 
-    private EditText userName, userEmail, userPassword;
+    private EditText userName, userEmail, userPassword, userAge;
     private Button signupButton;
     private TextView userLogin;
     private FirebaseAuth firebaseAuth;
+    private ImageView userProfilePic;
+    String email, name, age, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,20 +74,23 @@ public class SignUp extends AppCompatActivity {
     }
 
     private void setupUIViews() {
-        userName = (EditText) findViewById(R.id.pt_name);
-        userEmail = (EditText) findViewById(R.id.email_signUp);
+        userName = (EditText) findViewById(R.id.etNameUpdate);
+        userEmail = (EditText) findViewById(R.id.etEmailUpdate);
         userPassword = (EditText) findViewById(R.id.password_signup);
         signupButton = (Button) findViewById(R.id.bt_signup);
         userLogin = (TextView) findViewById(R.id.tv_backtologin);
+        userAge = (EditText) findViewById(R.id.etAgeUpdate);
+        userProfilePic = (ImageView)findViewById(R.id.ivProfile);
     }
 
     private Boolean validate() {
         Boolean result = false;
-        String name = userName.getText().toString();
-        String email = userEmail.getText().toString();
-        String password = userPassword.getText().toString();
+        name = userName.getText().toString();
+        email = userEmail.getText().toString();
+        password = userPassword.getText().toString();
+        age = userAge.getText().toString();
 
-        if (name.isEmpty() && email.isEmpty() && password.isEmpty()) {
+        if (name.isEmpty() && email.isEmpty() && password.isEmpty() && age.isEmpty()) {
             Toast.makeText(this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
         } else {
             result = true;
@@ -102,6 +110,8 @@ public class SignUp extends AppCompatActivity {
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful())
                                 {
+                                    sendUserData();
+                                    firebaseAuth.signOut();
                                    Toast.makeText(SignUp.this, "Successfully registered! Verification mail has been sent.", Toast.LENGTH_SHORT).show();;
                                     firebaseAuth.signOut();
                                     finish();
@@ -110,10 +120,18 @@ public class SignUp extends AppCompatActivity {
                                 else
                                     {
                                         //if got internet problem or cannot be sent
-                                        Toast.makeText(SignUp.this, "Verification mail has not been sent.", Toast.LENGTH_SHORT).show();;
+                                        Toast.makeText(SignUp.this, "Verification mail has not been sent.", Toast.LENGTH_SHORT).show();
                                     }
                         }
                     });
                 }
         }
+
+        private void sendUserData(){
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = firebaseDatabase.getReference(firebaseAuth.getUid());
+        UserProfile userProfile = new UserProfile(age, email, name);
+        myRef.setValue(userProfile);
+
+    }
 }
