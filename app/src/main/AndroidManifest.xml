@@ -13,12 +13,7 @@
         <activity android:name=".changeUsername"></activity>
         <activity android:name=".changePassword"></activity>
         <activity android:name=".ForgotPassword"></activity>
-        <activity android:name=".Logout"></activity>
         <activity android:name=".viewProfile"></activity>
-        <activity android:name=".PasswordUpdated" ></activity>
-        <activity android:name=".NewCredentials"></activity>
-        <activity android:name=".CodeVerify"></activity>
-        <activity android:name=".Selection" ></activity>
         <activity android:name=".SignUp"></activity>
         <activity android:name=".Splashscreen">
             <intent-filter>

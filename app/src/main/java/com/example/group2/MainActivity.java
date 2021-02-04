@@ -3,6 +3,8 @@ package com.example.group2;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog progressDialog;
     private int counter = 5;
     private TextView Info;
+    private TextView forgotPassword;
 
 
     @Override
@@ -60,6 +63,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        forgotPassword.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent (MainActivity.this, ForgotPassword.class));
+            }
+        }));
     }
 
     private void setupUIViews() {
@@ -69,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
         userSignUp = (TextView) findViewById(R.id.tv_signup);
         Info = (TextView) findViewById(R.id.tvInfo);
         Info.setText("No of attempts remaining: 5");
+        forgotPassword = (TextView) findViewById(R.id.tv_ForgotPassword);
     }
 
 
@@ -115,5 +125,6 @@ public class MainActivity extends AppCompatActivity {
                     firebaseAuth.signOut();
                 }
     }
+
 
 }
