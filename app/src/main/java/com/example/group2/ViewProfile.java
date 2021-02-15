@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,17 +13,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 public class ViewProfile extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
+    private FirebaseStorage firebaseStorage;
     private Button logout;
     private Button profileUpdate;
 
@@ -37,8 +43,17 @@ public class ViewProfile extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseStorage = FirebaseStorage.getInstance();
 
         DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+
+        StorageReference storageReference = firebaseStorage.getReference();
+        storageReference.child(firebaseAuth.getUid()).child("Images/Profile Picture").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Picasso.get().load(uri).fit().centerCrop().into(profilePic);
+            }
+        });
 
         profilePic = findViewById(R.id.etProfilePic);
         profileName = findViewById(R.id.tvProfileName);
@@ -46,6 +61,7 @@ public class ViewProfile extends AppCompatActivity {
         profileUpdate = findViewById(R.id.btnSave);
         profileEmail = findViewById(R.id.tvProfileEmail);
         logout = findViewById(R.id.btn_hmpg_logout);
+
 
         changePassword = findViewById(R.id.btnChangePassword);
 
