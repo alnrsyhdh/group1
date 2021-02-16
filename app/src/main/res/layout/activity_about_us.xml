@@ -9,41 +9,45 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="258dp"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249"
+        app:layout_constraintVertical_bias="0.261"
         app:srcCompat="@drawable/iconfr" />
 
     <TextView
         android:id="@+id/tv_aboutUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
         android:text="ABOUT US"
         android:textColor="@color/black"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.085" />
+        app:layout_constraintVertical_bias="0.074" />
 
     <TextView
         android:id="@+id/tv_story"
-        android:layout_width="301dp"
-        android:layout_height="115dp"
-        android:text="This app will help the user to book clothes easily. They do not need to go to the shop or boutique. Also, they do not need to line up to enter the stores. Everything within their fingertips.             With that, we have been inspired to develop an application that would not need the user or customer to go outside / mall / boutique to book the clothes.             In this app, they can choose their favourite or preferred clothes that suitable for their event or needs. Just fill in their details and within one button, they can book it easily.            We will do our best to develop this app within the times given and we hope that this app will be well created so that this app will be useful to all people. "
+        android:layout_width="335dp"
+        android:layout_height="259dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="This app is created to help users to book clothes easily. Our objective is to encourage people to lessen their movements of going out and there's no need to wasting your time queueing at the stores. Everything within your fingertips. By that, we have been inspired to develop an application that would not need the user or customer to go outside / mall / boutique to book clothes. To add another point, users can choose their favourite or preferred clothes that is suitable for their needs. By fill in your details and with just a click, they are ready to book! We surely will do our best to develop this app within the times given and hope it will be well created thus benefited users out there. "
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.699" />
+        app:layout_constraintVertical_bias="0.815" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
