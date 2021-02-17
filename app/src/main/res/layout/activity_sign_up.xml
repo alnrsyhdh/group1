@@ -145,5 +145,17 @@
         app:layout_constraintVertical_bias="0.692"
         app:srcCompat="@drawable/girl_icon_profpic" />
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.287"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
