@@ -6,9 +6,9 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/home"
-            android:title="Home"
-            android:icon="@drawable/ic_home"
+            android:id="@+id/book"
+            android:title="Book Now!"
+            android:icon="@drawable/order"
             />
 
         <item
@@ -23,7 +23,7 @@
 
 
         <item
-            android:title="Profile">
+            android:title="Settings">
 
             <menu>
                 <group android:checkableBehavior="single">
@@ -38,6 +38,24 @@
             android:title="About Us"
             android:icon="@drawable/ic_about_us"
             />
+
+         <item
+             android:id="@+id/contactUs"
+             android:title="Contact Us"
+             android:icon="@drawable/ic_baseline_phone_24"
+             />
+
+         <item
+             android:id="@+id/history"
+             android:title="Order History"
+             android:icon="@drawable/ic_history"
+             />
+
+         <item
+              android:id="@+id/feedback"
+              android:title="Customer Feedback"
+              android:icon="@android:drawable/btn_star"
+              />
 
                 </group>
             </menu>

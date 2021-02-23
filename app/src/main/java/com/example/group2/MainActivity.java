@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(user != null){
             finish();
-            startActivity(new Intent(MainActivity.this, secondActivity.class));
+            startActivity(new Intent(MainActivity.this, MenuProfile.class));
         }
 
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
                     Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(MainActivity.this, secondActivity.class));
+                    startActivity(new Intent(MainActivity.this, MenuProfile.class));
                     checkEmailVerification();
                 }else{
                     Toast.makeText(MainActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         if (emailflag)
             {
                 finish();
-               startActivity(new Intent(MainActivity.this, secondActivity.class));
+               startActivity(new Intent(MainActivity.this, MenuProfile.class));
             }
             else
                 {
