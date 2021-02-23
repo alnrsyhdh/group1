@@ -1,5 +1,4 @@
 package com.example.group2;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -32,6 +31,10 @@ public class secondActivity extends AppCompatActivity {
 
             case R.id.AboutUs:
                 startActivity(new Intent(secondActivity.this, AboutUs.class));
+                break;
+
+            case R.id.clothes_menu:
+                startActivity(new Intent(secondActivity.this, MenuProfile.class));
                 break;
         }
         return super.onOptionsItemSelected(item);
