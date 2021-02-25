@@ -86,7 +86,7 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
                     break;
 
                 case R.id.feedback: //customer feedback punya part
-                    startActivity(new Intent(MenuProfile.this, MenuProfile.class));
+                    startActivity(new Intent(MenuProfile.this, CustFeedback.class));
                     break;
             }
             return true;

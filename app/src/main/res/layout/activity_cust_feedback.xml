@@ -5,26 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C7C9CC"
-    tools:context=".AboutUs">
+    tools:context=".CustFeedback">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="258dp"
-        android:layout_height="200dp"
+    <Button
+        android:id="@+id/btn_undo"
+        android:layout_width="83dp"
+        android:layout_height="47dp"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:text="BACK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312"
-        app:srcCompat="@drawable/iconfr" />
+        app:layout_constraintVertical_bias="0.002" />
 
     <TextView
         android:id="@+id/tv_aboutUs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="ABOUT US"
+        android:text="CUSTOMER FEEDBACK"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -32,94 +33,93 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.143" />
 
-    <TextView
-        android:id="@+id/tv_story"
-        android:layout_width="334dp"
-        android:layout_height="39dp"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:text="This app was created to help users to book clothes easily."
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="14sp"
-        android:textStyle="normal|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.166" />
 
-    <TextView
-        android:id="@+id/textView"
+    <EditText
+        android:id="@+id/pt_fullname"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_borderline"
+        android:drawableStart="@drawable/ic_user"
         android:drawablePadding="16dp"
         android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
         android:padding="16dp"
-        android:text="App Version: v.1.00.00.00.01"
+        android:textColorHint="#66000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aboutUs"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <EditText
+        android:id="@+id/pt_username"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round_borderline"
+        android:drawableStart="@drawable/ic_baseline_emoji_emotions_24"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:textColorHint="#66000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_aboutUs"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <EditText
+        android:id="@+id/pt_feedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/round_borderline"
+        android:drawableStart="@drawable/ic_baseline_feedback_24"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Feedback"
+        android:inputType="textPersonName"
+        android:maxLines="4"
+        android:padding="16dp"
+        android:textColorHint="#66000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        app:layout_constraintVertical_bias="0.523" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/btn_sendFeedback"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
-        android:drawablePadding="16dp"
-        android:ems="10"
+        android:background="@drawable/round_border"
+        android:backgroundTint="@color/black"
+        android:fontFamily="sans-serif-black"
+        android:onClick="feedbacksent"
         android:padding="16dp"
-        android:text="System Version: Android 9"
+        android:text="submit feedback"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
-        android:drawablePadding="16dp"
-        android:ems="10"
-        android:padding="16dp"
-        android:text="Network Type: Wifi / Data"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="316dp"
-        android:layout_height="85dp"
-        android:text="The provided information will be used in order to address your issue and improve our services, subject to our Privacy Policy and Terms of Service."
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.914" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/pt_feedback"
+        app:layout_constraintVertical_bias="0.48" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,7 +37,7 @@ public class ContactUs extends AppCompatActivity {
             public void onClick(View v) {
                 String subject = et_subject.getText().toString().trim();
                 String message = et_message.getText().toString().trim();
-                String email = "masyitah1505@gmail.com ";
+                String email = "noreply@flairriental-app.firebaseapp.com ";
                 if(subject.isEmpty())
                 {
                     Toast.makeText(ContactUs.this, "Please add Subject", Toast.LENGTH_SHORT).show();
@@ -63,5 +63,7 @@ public class ContactUs extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }
