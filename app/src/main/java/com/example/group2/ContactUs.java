@@ -12,18 +12,26 @@ import android.widget.Toast;
 public class ContactUs extends AppCompatActivity {
 
     EditText et_subject,et_message;
-    Button btn;
+    Button btn, back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         et_subject = findViewById(R.id.email_subject);
         et_message = findViewById(R.id.email_message);
         btn = findViewById(R.id.email_send);
+        back = findViewById(R.id.btn_back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ContactUs.this, MenuProfile.class));
+            }
+        });
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

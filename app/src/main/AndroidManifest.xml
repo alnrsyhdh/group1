@@ -22,7 +22,8 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".ViewProfile" />
         <activity android:name=".SignUp" />
-        <activity android:name=".ContactUs"/>
+        <activity android:name=".ContactUs"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
