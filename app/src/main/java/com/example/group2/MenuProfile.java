@@ -25,7 +25,7 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
 
 
         //variables
-        TextView dress,suit,shoes,accesories,toppicks,newpicks;
+        TextView dress,suit,shoes;
         DrawerLayout drawerLayout;
         NavigationView navigationView;
         Toolbar toolbar;
@@ -43,9 +43,7 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
             dress= findViewById(R.id.dress);
             suit= findViewById(R.id.suit);
             shoes= findViewById(R.id.shoes);
-            accesories= findViewById(R.id.accesories);
-            toppicks= findViewById(R.id.toppicks);
-            newpicks= findViewById(R.id.newpicks);
+
 
             //toolbar
             setSupportActionBar(toolbar);

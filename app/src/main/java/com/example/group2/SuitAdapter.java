@@ -54,7 +54,7 @@ public class SuitAdapter extends RecyclerView.Adapter<SuitAdapter.ViewHolder>{
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 10;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

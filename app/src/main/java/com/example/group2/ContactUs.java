@@ -1,9 +1,11 @@
 package com.example.group2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,24 +14,18 @@ import android.widget.Toast;
 public class ContactUs extends AppCompatActivity {
 
     EditText et_subject,et_message;
-    Button btn, back;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact_us);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         et_subject = findViewById(R.id.email_subject);
         et_message = findViewById(R.id.email_message);
         btn = findViewById(R.id.email_send);
-        back = findViewById(R.id.btn_back);
-
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(ContactUs.this, MenuProfile.class));
-            }
-        });
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -37,7 +33,7 @@ public class ContactUs extends AppCompatActivity {
             public void onClick(View v) {
                 String subject = et_subject.getText().toString().trim();
                 String message = et_message.getText().toString().trim();
-                String email = "noreply@flairriental-app.firebaseapp.com ";
+                String email = "flair.riental@gmail.com";
                 if(subject.isEmpty())
                 {
                     Toast.makeText(ContactUs.this, "Please add Subject", Toast.LENGTH_SHORT).show();
@@ -66,4 +62,14 @@ public class ContactUs extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

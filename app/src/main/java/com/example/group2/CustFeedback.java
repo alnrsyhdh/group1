@@ -6,7 +6,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,7 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CustFeedback extends AppCompatActivity {
 
     private EditText username, feedback, fullname;
-    private Button undo;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
 
@@ -28,20 +26,17 @@ public class CustFeedback extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cust_feedback);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         username = (EditText)findViewById(R.id.pt_username);
         feedback = (EditText)findViewById(R.id.pt_feedback);
         fullname = findViewById(R.id.pt_fullname);
-        undo = findViewById(R.id.btn_undo);
+
         Firebase.setAndroidContext(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
-        undo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(CustFeedback.this, MenuProfile.class));
-            }
-        });
 
 
     }
@@ -59,5 +54,14 @@ public class CustFeedback extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                onBackPressed();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }
