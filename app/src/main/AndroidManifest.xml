@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.group2">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -13,6 +13,9 @@
         android:roundIcon="@mipmap/iconfr"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group2">
+        <activity android:name=".ViewShoes"/>
+        <activity android:name=".ViewSuit" />
+        <activity android:name=".ViewDress"/>
         <activity
             android:name=".MenuProfile"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -23,8 +26,8 @@
         <activity android:name=".ForgotPassword" />
         <activity android:name=".ViewProfile" />
         <activity android:name=".SignUp" />
-        <activity android:name=".ContactUs"/>
-        <activity android:name=".CustFeedback"/>
+        <activity android:name=".ContactUs" />
+        <activity android:name=".CustFeedback" />
         <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

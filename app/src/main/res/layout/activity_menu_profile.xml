@@ -103,7 +103,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/tv_3"
+                            android:id="@+id/dress"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/iv_dress"
@@ -137,7 +137,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/tv_4"
+                            android:id="@+id/suit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/iv_suit"
@@ -181,7 +181,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/tv_5"
+                            android:id="@+id/shoes"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/iv_acc"
@@ -212,7 +212,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/tv_6"
+                            android:id="@+id/accesories"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/iv_watch"
@@ -255,7 +255,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/tv_7"
+                            android:id="@+id/toppicks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/iv_fav"
@@ -287,7 +287,7 @@
                         android:layout_height="match_parent">
 
                         <TextView
-                            android:id="@+id/tv_8"
+                            android:id="@+id/newpicks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_below="@id/iv_recent"

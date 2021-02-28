@@ -4,6 +4,7 @@ package com.example.group2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -12,6 +13,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
@@ -19,7 +23,9 @@ import com.google.android.material.navigation.NavigationView;
 public class MenuProfile extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
 
+
         //variables
+        TextView dress,suit,shoes,accesories,toppicks,newpicks;
         DrawerLayout drawerLayout;
         NavigationView navigationView;
         Toolbar toolbar;
@@ -34,9 +40,36 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
             drawerLayout = findViewById(R.id.drawer_layout);
             navigationView = findViewById(R.id.nav_view);
             toolbar = findViewById(R.id.toolbar);
+            dress= findViewById(R.id.dress);
+            suit= findViewById(R.id.suit);
+            shoes= findViewById(R.id.shoes);
+            accesories= findViewById(R.id.accesories);
+            toppicks= findViewById(R.id.toppicks);
+            newpicks= findViewById(R.id.newpicks);
 
             //toolbar
             setSupportActionBar(toolbar);
+
+            dress.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MenuProfile.this, ViewDress.class));
+                }
+            });
+
+           suit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MenuProfile.this, ViewSuit.class));
+                }
+            });
+
+            shoes.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(MenuProfile.this, ViewShoes.class));
+                }
+            });
 
             //nav_drawer menu
             navigationView.bringToFront();
@@ -88,8 +121,12 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
                 case R.id.feedback: //customer feedback punya part
                     startActivity(new Intent(MenuProfile.this, CustFeedback.class));
                     break;
+
+
             }
             return true;
         }
+
+
 
     }
