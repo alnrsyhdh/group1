@@ -13,9 +13,14 @@
         android:roundIcon="@mipmap/iconfr"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group2">
-        <activity android:name=".ViewShoes"/>
+        <activity android:name=".RentalFormShoes"></activity>
+        <activity android:name=".RentalFormSuits" />
+        <activity android:name=".PrintReceipt" />
+        <activity android:name=".RentalFormDress" />
+        <activity android:name=".BookNow" />
+        <activity android:name=".ViewShoes" />
         <activity android:name=".ViewSuit" />
-        <activity android:name=".ViewDress"/>
+        <activity android:name=".ViewDress" />
         <activity
             android:name=".MenuProfile"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

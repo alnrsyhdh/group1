@@ -93,7 +93,7 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
 
         switch (menuItem.getItemId()) {
             case R.id.book: //bookNow
-                startActivity(new Intent(MenuProfile.this, MenuProfile.class));
+                startActivity(new Intent(MenuProfile.this, BookNow.class));
                 break;
 
             case R.id.settingsMenu:

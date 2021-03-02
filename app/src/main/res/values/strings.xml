@@ -4,4 +4,43 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string-array name="dress_array">
+        <item>Donna Gold - RM 250 PER DAY</item>
+        <item>Classic Gown - RM 450 PER DAY</item>
+        <item>Belt Blouse - RM 150 PER DAY</item>
+        <item>Frozen Flower - RM 300 PER DAY</item>
+        <item>Classic Wavy - RM 450 PER DAY</item>
+        <item>Ribbon Blouse - RM 100 PER DAY</item>
+        <item>Ariana Gown - RM 250 PER DAY</item>
+        <item>Bright Angel - RM 350 PER DAY</item>
+        <item>Sky Castle - RM 250 PER DAY</item>
+        <item>Royal Gown - RM 550 PER DAY</item>
+    </string-array>
+
+    <string-array name="suits_array">
+        <item>Basic Prada - RM 250 PER DAY</item>
+        <item>Royal Suit - RM 450 PER DAY</item>
+        <item>Casual Suit - RM 150 PER DAY</item>
+        <item>Typical Strips - RM 150 PER DAY</item>
+        <item>Old Style - RM 250 PER DAY</item>
+        <item>Mocha Style - RM 450 PER DAY</item>
+        <item>Grammys Night - RM 150 PER DAY</item>
+        <item>Classic King - RM 350 PER DAY</item>
+        <item>Simple Date - RM 100 PER DAY</item>
+        <item>Dolce Latte - RM 450 PER DAY</item>
+    </string-array>
+
+    <string-array name="shoes_array">
+        <item>Cinder Gella - RM 50 PER DAY</item>
+        <item>Flower Belle - RM 100 PER DAY</item>
+        <item>Classic Smoke - RM 70 PER DAY</item>
+        <item>Anastasia - RM 50 PER DAY</item>
+        <item>Classic Swarovski - RM 130 PER DAY</item>
+        <item>Summer Dior - RM 70 PER DAY</item>
+        <item>Winter Chanel - RM 80 PER DAY</item>
+        <item>Fall Prada - RM 70 PER DAY</item>
+        <item>Classic Gucci - RM 100 PER DAY</item>
+        <item>Summer Chanel - RM 80 PER DAY</item>
+    </string-array>
+
 </resources>

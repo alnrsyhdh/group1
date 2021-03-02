@@ -78,13 +78,13 @@
 
                 <TextView
                     android:id="@+id/tv_mprice"
-                    android:layout_margin="8dp"
-                    android:text="Rent Price: RM 250 PER DAY"
-                    android:textStyle="italic"
-                    android:textColor="@color/black"
-                    android:fontFamily="serif"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="serif"
+                    android:text="Rent Price: RM 250 PER DAY"
+                    android:textColor="@color/black"
+                    android:textStyle="italic" />
 
             </LinearLayout>
 

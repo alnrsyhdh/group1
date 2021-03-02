@@ -1,6 +1,7 @@
 package com.example.group2;
 
 import android.content.Intent;
+import android.hardware.usb.UsbEndpoint;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,41 +19,45 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class CustFeedback extends AppCompatActivity {
 
-    private EditText username, feedback, fullname;
+    private EditText Username, Feedback, Fullname;
+    String username, feedback, fullname;
+    private Button send;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
+    DatabaseReference reff;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cust_feedback);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        username = (EditText)findViewById(R.id.pt_username);
-        feedback = (EditText)findViewById(R.id.pt_feedback);
-        fullname = findViewById(R.id.pt_fullname);
-
-        Firebase.setAndroidContext(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        Username = (EditText)findViewById(R.id.pt_username);
+        Feedback = (EditText)findViewById(R.id.pt_feedback);
+        Fullname = findViewById(R.id.pt_fullname);
+        send = findViewById(R.id.btn_sendFeedback);
+
+
+
+        reff = FirebaseDatabase.getInstance().getReference("Feedback").child(firebaseAuth.getUid());
+        FeedbackDatabase feedbackDatabase = new FeedbackDatabase(fullname, username, feedback);
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                feedbackDatabase.setFullname(Fullname.getText().toString().trim());
+                feedbackDatabase.setUsername(Username.getText().toString().trim());
+                feedbackDatabase.setFeedback(Feedback.getText().toString().trim());
+                reff.push().setValue(feedbackDatabase);
+                Toast.makeText(CustFeedback.this,"Your feedback has been sent.", Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
 
-    public void feedbacksent (View view)
-    {
-        DatabaseReference databaseReference = firebaseDatabase.getReference("Feedback").child(firebaseAuth.getUid());
-        String usernameinput = username.getText().toString();
-        String fullnameinput = fullname.getText().toString();
-        String feedbackinput = feedback.getText().toString();
-        databaseReference.setValue(usernameinput);
-        databaseReference.setValue(fullnameinput);
-        databaseReference.setValue(feedbackinput);
-        Toast.makeText(this,"Your feedback has been sent.", Toast.LENGTH_LONG).show();
-
-    }
 
 
     @Override
