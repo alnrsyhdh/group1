@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7C9CC"
+    android:background="@color/grey"
     tools:context=".BookNow">
 
 
@@ -67,7 +67,7 @@
         android:id="@+id/btn_bookDress"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:background="#FFEB3B"
+        android:background="#7E5423"
         android:text="BOOK DRESS"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +81,7 @@
         android:id="@+id/btn_bookSuits"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:background="#FFEB3B"
+        android:background="#dbcb74"
         android:bottomRightRadius="10dp"
         android:bottomLeftRadius="10dp"
         android:topLeftRadius="10dp"
@@ -99,7 +99,7 @@
         android:id="@+id/btn_bookShoes"
         android:layout_width="120dp"
         android:layout_height="50dp"
-        android:background="#FFEB3B"
+        android:background="#dbcb74"
         android:bottomRightRadius="10dp"
         android:bottomLeftRadius="10dp"
         android:topLeftRadius="10dp"

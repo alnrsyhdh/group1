@@ -13,7 +13,7 @@ public class ViewSuit extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_dress);
+        setContentView(R.layout.activity_view_suit);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

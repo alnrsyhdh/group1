@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -75,7 +76,7 @@ public class RentalFormShoes extends AppCompatActivity {
                 myshoesreff.push().setValue(rentalShoesData);
                 Toast.makeText(RentalFormShoes.this,"Your Order have been booked!! Thank You!", Toast.LENGTH_LONG).show();
                 finish();
-                startActivity(new Intent(RentalFormShoes.this, PrintReceipt.class));
+                startActivity(new Intent(RentalFormShoes.this, MenuProfile.class));
             }
         });
 

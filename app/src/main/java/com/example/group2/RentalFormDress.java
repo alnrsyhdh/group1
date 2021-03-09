@@ -76,7 +76,7 @@ public class RentalFormDress extends AppCompatActivity {
                 mydressreff.push().setValue(rentalDressData);
                 Toast.makeText(RentalFormDress.this,"Your Order have been booked!! Thank You!", Toast.LENGTH_LONG).show();
                 finish();
-                startActivity(new Intent(RentalFormDress.this, PrintReceipt.class));
+                startActivity(new Intent(RentalFormDress.this, MenuProfile.class));
             }
         });
         

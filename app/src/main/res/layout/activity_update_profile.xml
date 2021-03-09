@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7C9CC"
+    android:background="@color/grey"
     tools:context=".UpdateProfile">
 
     <ImageView
@@ -88,11 +88,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_borderline"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#dbcb74"
         android:fontFamily="sans-serif-black"
         android:text="SAVE"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="#000000"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

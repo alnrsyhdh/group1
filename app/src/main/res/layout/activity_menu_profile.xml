@@ -5,10 +5,11 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7C9CC"
+    android:background="@color/grey"
     tools:context=".MenuProfile"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="wrap_content"
@@ -25,13 +26,12 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/grey">
+            >
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:background="@color/grey"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintBottom_toBottomOf="parent"

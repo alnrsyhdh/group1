@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C7C9CC"
+    android:background="@color/grey"
     tools:context=".RentalFormSuits">
 
     <Spinner
@@ -137,7 +137,7 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_bt"
         android:text="SUBMIT"
-        android:textColor="#FDFBFB"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
