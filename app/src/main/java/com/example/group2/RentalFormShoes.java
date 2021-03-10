@@ -73,10 +73,10 @@ public class RentalFormShoes extends AppCompatActivity {
                 rentalShoesData.setAdd(getAdd.getText().toString().trim());
                 rentalShoesData.setDate(getDate.getText().toString().trim());
                 rentalShoesData.setCustShoes(s3.getSelectedItem().toString().trim());
-                myshoesreff.push().setValue(rentalShoesData);
+                myshoesreff.setValue(rentalShoesData);
                 Toast.makeText(RentalFormShoes.this,"Your Order have been booked!! Thank You!", Toast.LENGTH_LONG).show();
                 finish();
-                startActivity(new Intent(RentalFormShoes.this, MenuProfile.class));
+                startActivity(new Intent(RentalFormShoes.this, PrintReceiptShoes.class));
             }
         });
 

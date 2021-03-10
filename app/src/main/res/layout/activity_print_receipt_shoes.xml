@@ -4,43 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgra"
-    tools:context=".RentalFormSuits">
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="301dp"
-        android:layout_height="55dp"
-        android:background="@drawable/round_borderline"
-        android:drawSelectorOnTop="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198" />
+    android:background="@drawable/bgrbook"
+    tools:context=".PrintReceiptShoes">
 
     <TextView
-        android:id="@+id/tv_fillform"
-        android:layout_width="353dp"
-        android:layout_height="56dp"
-        android:fontFamily="serif"
-        android:text="Please fill this form to secure your booking"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
-
-    <EditText
-        android:id="@+id/suits_custname"
+        android:id="@+id/tv_shoesname"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
-        android:drawableStart="@drawable/ic_baseline_person_outline_24"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Shoes Name"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:paddingStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307" />
+
+    <TextView
+        android:id="@+id/tv_fullname"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_borderline"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Full Name"
@@ -49,17 +38,16 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
+        app:layout_constraintVertical_bias="0.404" />
 
-    <EditText
-        android:id="@+id/suits_icnumber"
+    <TextView
+        android:id="@+id/tv_icnum"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
-        android:drawableStart="@drawable/ic_baseline_icnumber_24"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="IC Number"
@@ -68,17 +56,16 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.499" />
 
-    <EditText
-        android:id="@+id/suits_pnoneNo"
+    <TextView
+        android:id="@+id/tv_phoneNo"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
-        android:drawableStart="@drawable/ic_baseline_phone_24"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Phone Number"
@@ -87,17 +74,16 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.593" />
 
-    <EditText
-        android:id="@+id/suits_address"
+    <TextView
+        android:id="@+id/tv_address"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
-        android:drawableStart="@drawable/ic_home"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Address"
@@ -106,17 +92,16 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        app:layout_constraintVertical_bias="0.701" />
 
-    <EditText
-        android:id="@+id/suits_date"
+    <TextView
+        android:id="@+id/tv_bookingDate"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
-        android:drawableStart="@drawable/ic_baseline_calendar_24"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Date (DD/MM/YYYY)"
@@ -124,25 +109,51 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.723" />
+        app:layout_constraintVertical_bias="0.796" />
 
-    <Button
-        android:id="@+id/suits_confirm"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/rounded_button"
-        android:text="SUBMIT"
-        android:textColor="#FFFFFF"
+        android:text="MY RECEIPT"
+        android:textColor="#050505"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.916" />
+        app:layout_constraintVertical_bias="0.051" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Screenshot this receipt for future reference."
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <Button
+        android:id="@+id/btn_homeshoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_borderline"
+        android:text="HOME"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

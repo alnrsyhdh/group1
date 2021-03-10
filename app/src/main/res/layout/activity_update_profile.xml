@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@drawable/bgrsetin"
     tools:context=".UpdateProfile">
 
     <ImageView
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.164"
-        app:srcCompat="@drawable/girl_icon_profpic" />
+        app:srcCompat="@drawable/user" />
 
     <EditText
         android:id="@+id/etNameUpdate"
@@ -87,12 +87,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
-        android:backgroundTint="#dbcb74"
+        android:background="@drawable/rounded_button"
         android:fontFamily="sans-serif-black"
         android:text="SAVE"
         android:textAllCaps="false"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

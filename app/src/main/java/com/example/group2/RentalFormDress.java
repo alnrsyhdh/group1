@@ -37,11 +37,11 @@ public class RentalFormDress extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         
-        getName = findViewById(R.id.dress_custname);
-        getIcNum = findViewById(R.id.dress_icnumber);
-        getPhoneNum = findViewById(R.id.dress_pnoneNo);
-        getAdd = findViewById(R.id.dress_address);
-        getDate = findViewById(R.id.dress_date);
+        getName = findViewById(R.id.tv_fullname);
+        getIcNum = findViewById(R.id.tv_icnum);
+        getPhoneNum = findViewById(R.id.tv_phoneNo);
+        getAdd = findViewById(R.id.tv_address);
+        getDate = findViewById(R.id.tv_bookingDate);
         submit = findViewById(R.id.dress_confirm);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -73,10 +73,10 @@ public class RentalFormDress extends AppCompatActivity {
                 rentalDressData.setAdd(getAdd.getText().toString().trim());
                 rentalDressData.setDate(getDate.getText().toString().trim());
                 rentalDressData.setCustDress(s1.getSelectedItem().toString().trim());
-                mydressreff.push().setValue(rentalDressData);
+                mydressreff.setValue(rentalDressData);
                 Toast.makeText(RentalFormDress.this,"Your Order have been booked!! Thank You!", Toast.LENGTH_LONG).show();
                 finish();
-                startActivity(new Intent(RentalFormDress.this, MenuProfile.class));
+                startActivity(new Intent(RentalFormDress.this, PrintReceipt.class));
             }
         });
         

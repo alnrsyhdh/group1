@@ -112,9 +112,6 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
                 startActivity(new Intent(MenuProfile.this, ContactUs.class));
                 break;
 
-            case R.id.history: //Order History punya part
-                startActivity(new Intent(MenuProfile.this, MenuProfile.class));
-                break;
 
             case R.id.feedback: //customer feedback punya part
                 startActivity(new Intent(MenuProfile.this, CustFeedback.class));

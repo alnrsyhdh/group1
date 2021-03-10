@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String userEmail, String userPassword){
 
-        progressDialog.setMessage("Redirecting....");
+        progressDialog.setMessage("Welcome to FlairRiental Clothes Booking App!");
         progressDialog.show();
 
         firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {

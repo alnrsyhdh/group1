@@ -45,11 +45,6 @@
              android:icon="@drawable/ic_baseline_phone_24"
              />
 
-         <item
-             android:id="@+id/history"
-             android:title="Order History"
-             android:icon="@drawable/ic_history"
-             />
 
          <item
               android:id="@+id/feedback"

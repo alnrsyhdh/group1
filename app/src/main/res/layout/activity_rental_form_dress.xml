@@ -4,22 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@drawable/bgra"
     tools:context=".RentalFormDress">
 
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/round_border_verify"
+        android:layout_width="301dp"
+        android:layout_height="55dp"
+        android:background="@drawable/round_borderline"
         android:drawSelectorOnTop="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/tv_fillform"
@@ -28,7 +27,7 @@
         android:fontFamily="serif"
         android:text="Please fill this form to secure your booking"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,7 +37,7 @@
         app:layout_constraintVertical_bias="0.021" />
 
     <EditText
-        android:id="@+id/dress_custname"
+        android:id="@+id/tv_fullname"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
@@ -51,12 +50,13 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.236" />
+        app:layout_constraintVertical_bias="0.31" />
 
     <EditText
-        android:id="@+id/dress_icnumber"
+        android:id="@+id/tv_icnum"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
@@ -69,13 +69,13 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.346" />
+        app:layout_constraintVertical_bias="0.413" />
 
     <EditText
-        android:id="@+id/dress_pnoneNo"
+        android:id="@+id/tv_phoneNo"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
@@ -88,13 +88,13 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466" />
+        app:layout_constraintVertical_bias="0.524" />
 
     <EditText
-        android:id="@+id/dress_address"
+        android:id="@+id/tv_address"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
@@ -107,13 +107,13 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.631" />
 
     <EditText
-        android:id="@+id/dress_date"
+        android:id="@+id/tv_bookingDate"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
@@ -125,10 +125,10 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        app:layout_constraintVertical_bias="0.741" />
 
     <Button
         android:id="@+id/dress_confirm"
@@ -136,9 +136,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_bt"
+        android:background="@drawable/rounded_button"
         android:text="SUBMIT"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

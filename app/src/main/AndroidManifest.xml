@@ -7,34 +7,65 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/iconfr"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/iconfr"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group2">
-        <activity android:name=".RentalFormShoes"></activity>
-        <activity android:name=".RentalFormSuits" />
-        <activity android:name=".PrintReceipt" />
-        <activity android:name=".RentalFormDress" />
+        <activity android:name=".PrintReceiptShoes"
+            android:label="Receipt: Shoes"/>
+        <activity android:name=".PrientReceiptSuits"
+            android:label="Receipt: Suits"/>
+        <activity android:name=".PrintReceipt"
+            android:label="Receipt: Dress"/>
+        <activity
+            android:name=".RentalFormShoes"
+            android:label="Book Shoes" />
+        <activity
+            android:name=".RentalFormSuits"
+            android:label="Book Suits" />
+        <activity
+            android:name=".RentalFormDress"
+            android:label="Book Dress" />
         <activity android:name=".BookNow" />
-        <activity android:name=".ViewShoes" />
-        <activity android:name=".ViewSuit" />
-        <activity android:name=".ViewDress" />
+        <activity
+            android:name=".ViewShoes"
+            android:label="Shoes" />
+        <activity
+            android:name=".ViewSuit"
+            android:label="Suits" />
+        <activity
+            android:name=".ViewDress"
+            android:label="Dress" />
         <activity
             android:name=".MenuProfile"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".AboutUs" />
-        <activity android:name=".UpdatePassword" />
-        <activity android:name=".UpdateProfile" />
+        <activity
+            android:name=".AboutUs"
+            android:label="About Us" />
+        <activity
+            android:name=".UpdatePassword"
+            android:label="Update My Password" />
+        <activity
+            android:name=".UpdateProfile"
+            android:label="Update My Profile" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ForgotPassword" />
-        <activity android:name=".ViewProfile" />
+        <activity
+            android:name=".ForgotPassword"
+            android:label="Forgot Password" />
+        <activity
+            android:name=".ViewProfile"
+            android:label="My Profile" />
         <activity android:name=".SignUp" />
-        <activity android:name=".ContactUs" />
-        <activity android:name=".CustFeedback" />
+        <activity
+            android:name=".ContactUs"
+            android:label="Contact Us" />
+        <activity
+            android:name=".CustFeedback"
+            android:label="Feedback" />
         <activity android:name=".Splashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,17 +75,14 @@
         </activity>
 
         <provider
+            android:name="androidx.core.content.FileProvider"
             android:authorities="com.example.group2.fileprovider"
             android:exported="false"
-            android:grantUriPermissions="true"
-            android:name="androidx.core.content.FileProvider">
-
+            android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths"/>
-
+                android:resource="@xml/provider_paths" />
         </provider>
-
     </application>
 
 </manifest>

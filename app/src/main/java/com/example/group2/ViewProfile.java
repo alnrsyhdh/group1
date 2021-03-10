@@ -46,8 +46,8 @@ public class ViewProfile extends AppCompatActivity {
         firebaseStorage = FirebaseStorage.getInstance();
 
         DatabaseReference databaseReference = firebaseDatabase.getReference("UserInfo").child(firebaseAuth.getUid());
-
         StorageReference storageReference = firebaseStorage.getReference();
+
         storageReference.child(firebaseAuth.getUid()).child("Images/Profile Picture").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grey"
+    android:background="@drawable/brsignina"
     tools:context=".SignUp">
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
+        android:background="@drawable/round_bt"
         android:drawableStart="@drawable/ic_baseline_emoji_emotions_24"
         android:drawablePadding="16dp"
         android:ems="10"
@@ -50,7 +50,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
+        android:background="@drawable/round_bt"
         android:drawableStart="@drawable/ic_baseline_email_24"
         android:drawablePadding="16dp"
         android:ems="10"
@@ -71,7 +71,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
+        android:background="@drawable/round_bt"
         android:drawableStart="@drawable/ic_baseline_lock_24"
         android:drawablePadding="16dp"
         android:ems="10"
@@ -90,7 +90,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_borderline"
+        android:background="@drawable/round_bt"
         android:drawableStart="@drawable/ic_baseline_cake_24"
         android:drawablePadding="16dp"
         android:ems="10"
@@ -110,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:background="@drawable/round_bt"
+        android:background="@drawable/rounded_button"
         android:text="SIGN UP"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -143,7 +143,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.692"
-        app:srcCompat="@drawable/girl_icon_profpic" />
+        app:srcCompat="@drawable/user" />
 
     <ImageView
         android:id="@+id/imageView4"
