@@ -52,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <EditText
         android:id="@+id/shoes_icnumber"
@@ -113,21 +113,38 @@
 
     <EditText
         android:id="@+id/shoes_date"
-        android:layout_width="300dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
         android:drawableStart="@drawable/ic_baseline_calendar_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Date (DD/MM/YYYY)"
+        android:inputType="text"
         android:padding="16dp"
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.726" />
+        app:layout_constraintVertical_bias="0.734" />
+
+    <Button
+        android:id="@+id/btn_dateshoes"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_bt"
+        android:text="SELECT DATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/shoes_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
     <Button
         android:id="@+id/shoes_confirm"

@@ -54,7 +54,7 @@ public class PrintReceipt extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 RentalDressData rentalDressData = dataSnapshot.getValue(RentalDressData.class);
-                disDress.setText(String.format("Dress Name: %s", rentalDressData.getCustDress()));
+                disDress.setText(String.format("Item: %s", rentalDressData.getCustDress()));
                 disName.setText(String.format("Full Name: %s", rentalDressData.getName()));
                 disIc.setText(String.format("IC Number: %s", rentalDressData.getIcNum()));
                 disPhone.setText(String.format("Phone Number: %s", rentalDressData.getPhoneNum()));

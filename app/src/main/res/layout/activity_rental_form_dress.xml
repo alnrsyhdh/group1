@@ -113,22 +113,26 @@
         app:layout_constraintVertical_bias="0.631" />
 
     <EditText
-        android:id="@+id/tv_bookingDate"
-        android:layout_width="300dp"
+        android:id="@+id/dress_date"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/round_borderline"
         android:drawableStart="@drawable/ic_baseline_calendar_24"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Date (DD/MM/YYYY)"
+        android:inputType="text"
         android:padding="16dp"
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.189"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.741" />
+        app:layout_constraintVertical_bias="0.734" />
 
     <Button
         android:id="@+id/dress_confirm"
@@ -145,6 +149,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.916" />
+
+    <Button
+        android:id="@+id/btn_datedress"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_bt"
+        android:text="SELECT DATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toEndOf="@+id/dress_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.734" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

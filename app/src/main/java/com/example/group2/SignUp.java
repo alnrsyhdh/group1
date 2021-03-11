@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.storage.StorageManager;
 import android.provider.MediaStore;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,6 +35,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.regex.Pattern;
 
 public class SignUp extends AppCompatActivity {
 
@@ -134,18 +136,19 @@ public class SignUp extends AppCompatActivity {
 
     private Boolean validate() {
         Boolean result = false;
+
         name = userName.getText().toString();
         email = userEmail.getText().toString();
         password = userPassword.getText().toString();
         age = userAge.getText().toString();
 
-        if (name.isEmpty() && email.isEmpty() && password.isEmpty() && age.isEmpty() && imagePath==null) {
+      if (name.isEmpty() && email.isEmpty() && password.isEmpty() && age.isEmpty() && imagePath==null) {
             Toast.makeText(this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
-        } else {
+       } else {
             result = true;
         }
 
-        return result;
+       return result;
     }
 
     private void sendEmailVerification()
