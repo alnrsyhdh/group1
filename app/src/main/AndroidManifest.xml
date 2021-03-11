@@ -67,7 +67,9 @@
         <activity
             android:name=".CustFeedback"
             android:label="Feedback" />
-        <activity android:name=".Splashscreen">
+        <activity android:name=".Splashscreen"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
