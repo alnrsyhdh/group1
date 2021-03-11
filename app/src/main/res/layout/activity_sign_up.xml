@@ -17,10 +17,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <EditText
         android:id="@+id/etNameUpdate"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_signupmain"
-        app:layout_constraintVertical_bias="0.329" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <EditText
         android:id="@+id/etEmailUpdate"
@@ -62,14 +62,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.022" />
 
     <EditText
         android:id="@+id/password_signup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_bt"
         android:drawableStart="@drawable/ic_baseline_lock_24"
@@ -102,7 +102,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_signup"
-        app:layout_constraintVertical_bias="0.006" />
+        app:layout_constraintVertical_bias="0.417" />
 
     <Button
         android:id="@+id/bt_signup"
@@ -127,10 +127,9 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_signup"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.427" />
 
     <ImageView
         android:id="@+id/ivProfile"
@@ -139,10 +138,10 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/etNameUpdate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.692"
+        app:layout_constraintVertical_bias="0.548"
         app:srcCompat="@drawable/user" />
 
     <ImageView
@@ -154,8 +153,21 @@
         app:layout_constraintHorizontal_bias="0.612"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287"
+        app:layout_constraintVertical_bias="0.202"
         app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter at least 1 capital letter, 1 symbols and 1 number."
+        android:textSize="9sp"
+        app:layout_constraintBottom_toTopOf="@+id/etAgeUpdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_signup"
+        app:layout_constraintVertical_bias="0.189" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
