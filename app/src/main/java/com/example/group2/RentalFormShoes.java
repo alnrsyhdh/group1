@@ -2,8 +2,13 @@ package com.example.group2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,6 +72,7 @@ public class RentalFormShoes extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                addNotification();
                 rentalShoesData.setName(getName.getText().toString().trim());
                 rentalShoesData.setIcNum(getIcNum.getText().toString().trim());
                 rentalShoesData.setPhoneNum(getPhoneNum.getText().toString().trim());
@@ -82,6 +88,20 @@ public class RentalFormShoes extends AppCompatActivity {
 
 
 
+    }
+
+    private void addNotification(){
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
+                .setSmallIcon(R.drawable.fr_icon)
+                .setColor(Color.MAGENTA)
+                .setContentTitle("FlairRiental")
+                .setContentText("Thank you for your booking! Your shoes is successfully booked.");
+
+        Intent notificationIntent = new Intent(this, MenuProfile.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        builder.setContentIntent(contentIntent);
+        NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        manager.notify(0, builder.build());
     }
 
     @Override
