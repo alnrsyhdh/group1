@@ -142,9 +142,14 @@ public class SignUp extends AppCompatActivity {
         password = userPassword.getText().toString();
         age = userAge.getText().toString();
 
+        int a = password.length();
+
       if (name.isEmpty() && email.isEmpty() && password.isEmpty() && age.isEmpty() && imagePath==null) {
             Toast.makeText(this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
-       } else {
+       } else if (a<6){
+          Toast.makeText(this, "Please enter password that have more than 6 character!", Toast.LENGTH_SHORT).show();
+        }
+      else {
             result = true;
         }
 

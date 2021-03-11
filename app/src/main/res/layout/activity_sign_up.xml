@@ -17,10 +17,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <EditText
         android:id="@+id/etNameUpdate"
@@ -41,7 +40,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_signupmain"
-        app:layout_constraintVertical_bias="0.227" />
+        app:layout_constraintVertical_bias="0.264" />
 
     <EditText
         android:id="@+id/etEmailUpdate"
@@ -62,14 +61,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNameUpdate"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.029" />
 
     <EditText
         android:id="@+id/password_signup"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_bt"
         android:drawableStart="@drawable/ic_baseline_lock_24"
@@ -102,7 +101,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_signup"
-        app:layout_constraintVertical_bias="0.417" />
+        app:layout_constraintVertical_bias="0.089" />
 
     <Button
         android:id="@+id/bt_signup"
@@ -141,7 +140,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.548"
+        app:layout_constraintVertical_bias="0.696"
         app:srcCompat="@drawable/user" />
 
     <ImageView
@@ -150,24 +149,11 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202"
+        app:layout_constraintVertical_bias="0.227"
         app:srcCompat="@android:drawable/ic_menu_add" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Please enter at least 1 capital letter, 1 symbols and 1 number."
-        android:textSize="9sp"
-        app:layout_constraintBottom_toTopOf="@+id/etAgeUpdate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_signup"
-        app:layout_constraintVertical_bias="0.189" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

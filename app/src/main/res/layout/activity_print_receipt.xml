@@ -14,7 +14,7 @@
         android:background="@drawable/round_borderline"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Dress Name"
+        android:hint="Item"
         android:inputType="textPersonName"
         android:padding="16dp"
         android:paddingStart="20dp"
