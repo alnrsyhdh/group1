@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgra"
+    android:background="@drawable/bgrfull"
     tools:context=".RentalFormDress">
 
 
@@ -27,7 +27,7 @@
         android:fontFamily="serif"
         android:text="Please fill this form to secure your booking"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

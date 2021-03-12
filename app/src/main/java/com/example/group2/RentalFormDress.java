@@ -95,9 +95,21 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
                 rentalDressData.setDate(getDate.getText().toString().trim());
                 rentalDressData.setCustDress(s1.getSelectedItem().toString().trim());
                 mydressreff.setValue(rentalDressData);
-                Toast.makeText(RentalFormDress.this,"Order submitted!", Toast.LENGTH_LONG).show();
-                finish();
-                startActivity(new Intent(RentalFormDress.this, PrintReceipt.class));
+                name = getName.getText().toString();
+                IcNum = getIcNum.getText().toString();
+                PhoneNum = getPhoneNum.getText().toString();
+                Add = getAdd.getText().toString();
+                Date = getDate.getText().toString();
+
+
+                if (name.isEmpty() || IcNum.isEmpty() || PhoneNum.isEmpty() || Add.isEmpty() || Date.isEmpty()) {
+                    Toast.makeText(RentalFormDress.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(RentalFormDress.this,"Order submitted!", Toast.LENGTH_LONG).show();
+                    finish();
+                    startActivity(new Intent(RentalFormDress.this, PrintReceipt.class));
+                }
             }
         });
 

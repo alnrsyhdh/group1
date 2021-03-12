@@ -82,6 +82,7 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 addNotification();
                 rentalSuitsData.setName(getName.getText().toString().trim());
                 rentalSuitsData.setIcNum(getIcNum.getText().toString().trim());
@@ -90,13 +91,25 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
                 rentalSuitsData.setDate(getDate.getText().toString().trim());
                 rentalSuitsData.setCustSuits(s2.getSelectedItem().toString().trim());
                 mysuitsreff.setValue(rentalSuitsData);
-                Toast.makeText(RentalFormSuits.this,"Order submitted!", Toast.LENGTH_LONG).show();
-                finish();
-                startActivity(new Intent(RentalFormSuits.this, PrientReceiptSuits.class));
+
+                name = getName.getText().toString();
+                IcNum = getIcNum.getText().toString();
+                PhoneNum = getPhoneNum.getText().toString();
+                Add = getAdd.getText().toString();
+                Date = getDate.getText().toString();
+
+
+                if (name.isEmpty() || IcNum.isEmpty() || PhoneNum.isEmpty() || Add.isEmpty() || Date.isEmpty()) {
+                    Toast.makeText(RentalFormSuits.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(RentalFormSuits.this,"Order submitted!", Toast.LENGTH_LONG).show();
+                    finish();
+                    startActivity(new Intent(RentalFormSuits.this, PrientReceiptSuits.class));
+                }
+
             }
         });
-
-
 
     }
 

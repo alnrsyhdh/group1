@@ -89,9 +89,23 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
                 rentalShoesData.setDate(getDate.getText().toString().trim());
                 rentalShoesData.setCustShoes(s3.getSelectedItem().toString().trim());
                 myshoesreff.setValue(rentalShoesData);
-                Toast.makeText(RentalFormShoes.this,"Order submitted!", Toast.LENGTH_LONG).show();
-                finish();
-                startActivity(new Intent(RentalFormShoes.this, PrintReceiptShoes.class));
+
+
+                name = getName.getText().toString();
+                IcNum = getIcNum.getText().toString();
+                PhoneNum = getPhoneNum.getText().toString();
+                Add = getAdd.getText().toString();
+                Date = getDate.getText().toString();
+
+
+                if (name.isEmpty() || IcNum.isEmpty() || PhoneNum.isEmpty() || Add.isEmpty() || Date.isEmpty()) {
+                    Toast.makeText(RentalFormShoes.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(RentalFormShoes.this,"Order submitted!", Toast.LENGTH_LONG).show();
+                    finish();
+                    startActivity(new Intent(RentalFormShoes.this, PrintReceiptShoes.class));
+                }
             }
         });
 

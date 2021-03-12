@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/bgrset"
+    android:background="@drawable/bgrfull"
     tools:context=".ContactUs">
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="228dp"
         android:layout_height="49dp"
-        android:background="@drawable/round_borderline"
+        android:background="@drawable/round_bt"
         android:drawablePadding="16dp"
         android:ems="10"
         android:enabled="false"
@@ -62,9 +62,9 @@
         android:id="@+id/email_send"
         android:layout_width="151dp"
         android:layout_height="48dp"
-        android:background="@drawable/round_bt"
+        android:background="@drawable/rounded_button"
         android:text="Send"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
