@@ -46,7 +46,7 @@
         android:id="@+id/email_message"
         android:layout_width="300dp"
         android:layout_height="196dp"
-        android:background="#ffdab9"
+        android:background="#f4c2c3"
         android:drawablePadding="16dp"
         android:ems="10"
         android:hint="Message"

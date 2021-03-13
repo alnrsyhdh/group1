@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/nav_view"
-        android:background="#cc546d"
+        android:background="#f4e0e1"
         app:headerLayout="@layout/activity_header"
         app:menu="@menu/menu"
         android:layout_gravity="start"/>
@@ -103,7 +103,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:background="#cc546d"
+                        android:background="#f4c2c3"
                         android:layout_height="match_parent">
 
                         <TextView
@@ -138,7 +138,7 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:background="#cc546d"
+                        android:background="#f4c2c3"
                         android:layout_height="match_parent">
 
                         <TextView
@@ -183,7 +183,7 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="#cc546d">
+                        android:background="#f4c2c3">
 
                         <TextView
                             android:id="@+id/shoes"
