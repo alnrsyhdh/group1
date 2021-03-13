@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgrfull"
+    android:background="@drawable/bgrbooka"
     tools:context=".ViewProfile">
 
     <ImageView
@@ -69,7 +69,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/round_borderline"
-        android:backgroundTint="#B00020"
+        android:backgroundTint="@color/black"
         android:fontFamily="sans-serif-black"
         android:text="LOGOUT"
         android:textColor="@color/white"

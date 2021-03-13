@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgrfull"
+    android:background="@drawable/bgrbooka"
     tools:context=".BookNow">
 
 
@@ -123,6 +123,8 @@
         android:text="Please take note that 1 customer only can book 1 item from each section."
         android:textAlignment="center"
         android:textSize="9sp"
+        android:textStyle="italic"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
