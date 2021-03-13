@@ -3,7 +3,7 @@
     android:id="@+id/iv_header"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@drawable/header_3"
+    android:background="@drawable/pinkdresses"
     android:gravity="bottom"
     android:orientation="vertical">
 

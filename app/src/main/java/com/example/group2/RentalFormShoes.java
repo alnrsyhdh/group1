@@ -144,7 +144,7 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
 
     private void addNotification(){
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(R.drawable.fr_icon)
+                .setSmallIcon(R.drawable.logoo)
                 .setColor(Color.MAGENTA)
                 .setContentTitle("FlairRiental")
                 .setContentText("Thank you for your booking! Your shoes is successfully booked.");

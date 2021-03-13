@@ -23,7 +23,7 @@
         android:id="@+id/tv_fillform"
         android:layout_width="353dp"
         android:layout_height="56dp"
-        android:fontFamily="serif"
+        android:fontFamily="sans-serif"
         android:text="Please fill this form to secure your booking"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -31,9 +31,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021" />
+        app:layout_constraintVertical_bias="0.114" />
 
     <EditText
         android:id="@+id/suits_custname"

@@ -9,9 +9,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/iconfr"
+        android:icon="@mipmap/logoo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/iconfr"
+        android:roundIcon="@mipmap/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Group2">
         <activity android:name=".RentalFormShoes" />
