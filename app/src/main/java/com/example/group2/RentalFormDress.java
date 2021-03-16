@@ -37,7 +37,7 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
 
     String [] dress;
     private EditText getName, getIcNum, getPhoneNum, getAdd, getDate;
-    String custDress, name, IcNum, PhoneNum, Add, Date;
+    private String custDress, name, IcNum, PhoneNum, Add, Date;
     private Button submit, btnDatePicker;
     private DatePickerDialog datePickerDialog;
     private FirebaseDatabase firebaseDatabase;
@@ -95,6 +95,7 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
                 rentalDressData.setDate(getDate.getText().toString().trim());
                 rentalDressData.setCustDress(s1.getSelectedItem().toString().trim());
                 mydressreff.setValue(rentalDressData);
+
                 name = getName.getText().toString();
                 IcNum = getIcNum.getText().toString();
                 PhoneNum = getPhoneNum.getText().toString();

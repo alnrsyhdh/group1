@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class UpdatePassword extends AppCompatActivity {
+public class                UpdatePassword extends AppCompatActivity {
 
     private Button update;
     private EditText newPassword;

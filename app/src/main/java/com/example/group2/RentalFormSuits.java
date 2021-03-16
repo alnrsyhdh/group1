@@ -31,8 +31,9 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
 
     String [] suits;
     private EditText getName, getIcNum, getPhoneNum, getAdd, getDate;
-    String custSuits, name, IcNum, PhoneNum, Add, Date;
+    private String custSuits, name, IcNum, PhoneNum, Add, Date;
     private Button submit, btnDatePicker;
+    private DatePickerDialog datePickerDialog;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
     DatabaseReference mysuitsreff;
@@ -106,6 +107,7 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(RentalFormSuits.this,"Order submitted!", Toast.LENGTH_LONG).show();
                     finish();
                     startActivity(new Intent(RentalFormSuits.this, PrientReceiptSuits.class));
+
                 }
 
             }
