@@ -85,15 +85,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void validate(String userEmail, String userPassword){
 
-        progressDialog.setMessage("Welcome to FlairRiental Clothes Booking App!");
-        progressDialog.show();
-
         firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     progressDialog.dismiss();
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    progressDialog.setMessage("Welcome to FlairRiental Clothes Booking App!");
+                    progressDialog.show();
                     startActivity(new Intent(MainActivity.this, MenuProfile.class));
                     checkEmailVerification();
                 }else{

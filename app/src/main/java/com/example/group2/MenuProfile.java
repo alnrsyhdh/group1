@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
@@ -27,6 +28,7 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
     //variables
     TextView dress,suit,shoes;
     DrawerLayout drawerLayout;
+    Button booknow;
     NavigationView navigationView;
     Toolbar toolbar;
 
@@ -43,10 +45,18 @@ public class MenuProfile extends AppCompatActivity implements NavigationView.OnN
         dress= findViewById(R.id.dress);
         suit= findViewById(R.id.suit);
         shoes= findViewById(R.id.shoes);
+        booknow = findViewById(R.id.btn_booknow);
 
 
         //toolbar
         setSupportActionBar(toolbar);
+
+        booknow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MenuProfile.this, BookNow.class));
+            }
+        });
 
         dress.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -42,14 +42,6 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ViewHolder>{
         holder.textViewPrice.setText(shoesDataList.getShoesPrice());
         holder.shoesImage.setImageResource(shoesDataList.getShoesImage());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, shoesDataList.getShoesName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
     }
 
     @Override

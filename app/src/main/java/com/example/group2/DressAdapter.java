@@ -42,14 +42,6 @@ public class DressAdapter extends RecyclerView.Adapter<DressAdapter.ViewHolder>{
         holder.textViewPrice.setText(dressDataList.getDressPrice());
         holder.dressImage.setImageResource(dressDataList.getDressImage());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, dressDataList.getDressName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
     }
 
     @Override

@@ -42,14 +42,6 @@ public class SuitAdapter extends RecyclerView.Adapter<SuitAdapter.ViewHolder>{
         holder.textViewPrice.setText(suitDataList.getSuitPrice());
         holder.suitImage.setImageResource(suitDataList.getSuitImage());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, suitDataList.getSuitName(), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
     }
 
     @Override

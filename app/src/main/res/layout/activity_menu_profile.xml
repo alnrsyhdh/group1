@@ -23,10 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
+
+
+
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -47,12 +50,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/abril_fatface"
                 android:text="FlairRiental"
                 android:textColor="#000000"
                 android:textSize="30sp"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -61,12 +63,14 @@
                 android:layout_width="210dp"
                 android:layout_height="33dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="serif"
                 android:text="Clothes for your best moments"
                 android:textColor="#000000"
                 android:textSize="14sp"
                 android:textStyle="italic"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                app:layout_constraintEnd_toStartOf="@+id/iv_flairicon"
+                app:layout_constraintHorizontal_bias="0.018"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_1" />
 
@@ -74,23 +78,23 @@
                 android:id="@+id/iv_flairicon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:tint="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.833"
                 app:layout_constraintStart_toEndOf="@+id/tv_1"
                 app:layout_constraintTop_toBottomOf="@+id/toolbar"
                 app:layout_constraintVertical_bias="0.023"
-                app:srcCompat="@drawable/flair_icon" />
+                app:srcCompat="@drawable/flair_icon"
+                app:tint="#000000" />
 
             <LinearLayout
                 android:id="@+id/linearlayout1"
                 android:layout_width="0dp"
                 android:layout_height="175dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="164dp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_flairicon">
 
@@ -98,13 +102,13 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:background="@drawable/bgrbooka"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:background="@drawable/bgrbooka">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:background="#f4c2c3"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="#f4c2c3">
 
                         <TextView
                             android:id="@+id/dress"
@@ -138,8 +142,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:background="#f4c2c3"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="#f4c2c3">
 
                         <TextView
                             android:id="@+id/suit"
@@ -148,8 +152,8 @@
                             android:layout_below="@id/iv_suit"
                             android:layout_centerHorizontal="true"
                             android:layout_marginTop="10dp"
-                            android:text="SUITS"
                             android:fontFamily="sans-serif-medium"
+                            android:text="SUITS"
                             android:textColor="#000000"
                             android:textSize="24sp" />
 
@@ -166,19 +170,20 @@
 
             <LinearLayout
                 android:id="@+id/linearlayout2"
-                android:layout_width="0dp"
+                android:layout_width="411dp"
                 android:layout_height="175dp"
-                android:layout_marginTop="8dp"
                 android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearlayout1">
+                app:layout_constraintTop_toBottomOf="@+id/linearlayout1"
+                app:layout_constraintVertical_bias="0.0">
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
-                    android:layout_weight="1" >
+                    android:layout_weight="1">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -208,7 +213,43 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
+            <Button
+                android:id="@+id/btn_booknow"
+                android:layout_width="271dp"
+                android:layout_height="77dp"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="50dp"
+                android:background="#f4c2c3"
+                android:drawableTop="@drawable/order"
+                android:padding="15dp"
+                android:text="BOOK NOW!!"
+                android:textSize="14sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintBottom_toTopOf="@+id/linearlayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_flairicon"
+                app:layout_constraintVertical_bias="0.287" />
+
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="143dp"
+                android:layout_height="38dp"
+                android:fontFamily="serif"
+                android:text="VIEW CATALOGUE"
+                android:textColor="#050505"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/linearlayout1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.059"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_booknow"
+                app:layout_constraintVertical_bias="1.0" />
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
+

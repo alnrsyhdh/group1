@@ -31,7 +31,7 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
 
     String [] suits;
     private EditText getName, getIcNum, getPhoneNum, getAdd, getDate;
-    private String custSuits, name, IcNum, PhoneNum, Add, Date;
+    private String custSuits, name, IcNum, PhoneNum, Add, Date, Price;
     private Button submit, btnDatePicker;
     private DatePickerDialog datePickerDialog;
     private FirebaseDatabase firebaseDatabase;
@@ -64,13 +64,13 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
 
         suits = getResources().getStringArray(R.array.suits_array);
         Spinner s2 = (Spinner) findViewById(R.id.spinner2);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, suits);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, suits);
         s2.setAdapter(adapter);
         s2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 int index = arg0.getSelectedItemPosition();
-                Toast.makeText(getBaseContext(),"You have selected item : " + suits[index], Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -91,6 +91,36 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
                 rentalSuitsData.setAdd(getAdd.getText().toString().trim());
                 rentalSuitsData.setDate(getDate.getText().toString().trim());
                 rentalSuitsData.setCustSuits(s2.getSelectedItem().toString().trim());
+
+                String dress = s2.getSelectedItem().toString().trim();
+                if(dress.equals("Basic Prada")){
+                    Price="RM250.00";
+                }else if(dress.equals("Royal Suit")){
+                    Price="RM450.00";
+                }else if(dress.equals("Casual Suit")) {
+                    Price = "RM150.00";
+                }else if(dress.equals("Typical Strips")) {
+                    Price = "RM150.00";
+                }else if(dress.equals("Old Style")) {
+                    Price = "RM250.00";
+                }else if(dress.equals("Mocha Style")) {
+                    Price = "RM450.00";
+                }else if(dress.equals("Grammys Night")) {
+                    Price = "RM150.00";
+                }else if(dress.equals("Classic King")) {
+                    Price = "RM350.00";
+                }else if(dress.equals("Simple Date")) {
+                    Price = "RM100.00";
+                }else if(dress.equals("Dolce Latte")) {
+                    Price = "RM450.00";
+                }else{
+                    Price = "RM0.00";
+                }
+
+
+                rentalSuitsData.setPrice(Price);
+
+
                 mysuitsreff.setValue(rentalSuitsData);
 
                 name = getName.getText().toString();
@@ -104,7 +134,6 @@ public class RentalFormSuits extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(RentalFormSuits.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(RentalFormSuits.this,"Order submitted!", Toast.LENGTH_LONG).show();
                     finish();
                     startActivity(new Intent(RentalFormSuits.this, PrientReceiptSuits.class));
 

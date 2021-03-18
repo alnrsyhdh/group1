@@ -1,9 +1,17 @@
 package com.example.group2;
 
 public class RentalDressData {
-    String custDress, name, IcNum, PhoneNum, Add, Date;
+    String custDress, name, IcNum, PhoneNum, Add, Date, Price;
 
     public RentalDressData(){
+    }
+
+    public String getPrice() {
+        return Price;
+    }
+
+    public void setPrice(String price) {
+        Price = price;
     }
 
     public String getName() {

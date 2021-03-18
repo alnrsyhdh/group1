@@ -100,7 +100,7 @@
         android:drawableStart="@drawable/ic_home"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Address"
+        android:hint="City"
         android:inputType="textPostalAddress"
         android:padding="16dp"
         android:paddingStart="20dp"

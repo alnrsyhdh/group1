@@ -5,42 +5,42 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string-array name="dress_array">
-        <item>Donna Gold - RM250</item>
-        <item>Classic Gown - RM450</item>
-        <item>Belt Blouse - RM150</item>
-        <item>Frozen Flower - RM300</item>
-        <item>Classic Wavy - RM450</item>
-        <item>Ribbon Blouse - RM100</item>
-        <item>Ariana Gown - RM250</item>
-        <item>Bright Angel - RM350</item>
-        <item>Sky Castle - RM250</item>
-        <item>Royal Gown - RM550</item>
+        <item>Donna Gold</item>
+        <item>Classic Gown</item>
+        <item>Belt Blouse</item>
+        <item>Frozen Flower</item>
+        <item>Classic Wavy</item>
+        <item>Ribbon Blouse</item>
+        <item>Ariana Gown</item>
+        <item>Bright Angel</item>
+        <item>Sky Castle</item>
+        <item>Royal Gown</item>
     </string-array>
 
     <string-array name="suits_array">
-        <item>Basic Prada - RM250</item>
-        <item>Royal Suit - RM450</item>
-        <item>Casual Suit - RM150</item>
-        <item>Typical Strips - RM150</item>
-        <item>Old Style - RM250</item>
-        <item>Mocha Style - RM450</item>
-        <item>Grammys Night - RM150</item>
-        <item>Classic King - RM350</item>
-        <item>Simple Date - RM100</item>
-        <item>Dolce Latte - RM450</item>
+        <item>Basic Prada</item>
+        <item>Royal Suit</item>
+        <item>Casual Suit</item>
+        <item>Typical Strips</item>
+        <item>Old Style</item>
+        <item>Mocha Style</item>
+        <item>Grammys Night</item>
+        <item>Classic King</item>
+        <item>Simple Date</item>
+        <item>Dolce Latte</item>
     </string-array>
 
     <string-array name="shoes_array">
-        <item>Cinder Gella - RM50</item>
-        <item>Flower Belle - RM100</item>
-        <item>Classic Smoke - RM70</item>
-        <item>Anastasia - RM50</item>
-        <item>Classic Swarovski - RM130</item>
-        <item>Summer Dior - RM70</item>
-        <item>Winter Chanel - RM80</item>
-        <item>Fall Prada - RM70</item>
-        <item>Classic Gucci - RM100</item>
-        <item>Summer Chanel - RM80</item>
+        <item>Cinder Gella</item>
+        <item>Flower Belle</item>
+        <item>Classic Smoke</item>
+        <item>Anastasia</item>
+        <item>Classic Swarovski</item>
+        <item>Summer Dior</item>
+        <item>Winter Chanel</item>
+        <item>Fall Prada</item>
+        <item>Classic Gucci</item>
+        <item>Summer Chanel</item>
     </string-array>
 
     <string name="your_order">Your Order</string>

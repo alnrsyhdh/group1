@@ -2,11 +2,15 @@ package com.example.group2;
 
 public class RentalShoesData {
 
-    String custShoes, name, IcNum, PhoneNum, Add, Date;
+    String custShoes, name, IcNum, PhoneNum, Add, Date, Price;
 
     public RentalShoesData(){
 
     }
+
+    public String getPrice() { return Price; }
+
+    public void setPrice(String price) { Price = price; }
 
     public String getCustShoes() {
         return custShoes;

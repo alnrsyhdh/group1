@@ -37,7 +37,7 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
 
     String [] dress;
     private EditText getName, getIcNum, getPhoneNum, getAdd, getDate;
-    private String custDress, name, IcNum, PhoneNum, Add, Date;
+    private String custDress, name, IcNum, PhoneNum, Add, Date, Price;
     private Button submit, btnDatePicker;
     private DatePickerDialog datePickerDialog;
     private FirebaseDatabase firebaseDatabase;
@@ -68,13 +68,13 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
 
         dress = getResources().getStringArray(R.array.dress_array);
         Spinner s1 = (Spinner) findViewById(R.id.spinner1);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, dress);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dress);
         s1.setAdapter(adapter);
         s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 int index = arg0.getSelectedItemPosition();
-                Toast.makeText(getBaseContext(),"You have selected item : " + dress[index], Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
@@ -94,6 +94,36 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
                 rentalDressData.setAdd(getAdd.getText().toString().trim());
                 rentalDressData.setDate(getDate.getText().toString().trim());
                 rentalDressData.setCustDress(s1.getSelectedItem().toString().trim());
+
+
+                String dress = s1.getSelectedItem().toString().trim();
+                if(dress.equals("Donna Gold")){
+                    Price="RM250.00";
+                }else if(dress.equals("Classic Gown")){
+                    Price="RM450.00";
+                }else if(dress.equals("Belt Blouse")) {
+                    Price = "RM150.00";
+                }else if(dress.equals("Frozen Flower")) {
+                    Price = "RM300.00";
+                }else if(dress.equals("Classic Wavy")) {
+                    Price = "RM450.00";
+                }else if(dress.equals("Ribbon Blouse")) {
+                    Price = "RM100.00";
+                }else if(dress.equals("Ariana Gown")) {
+                    Price = "RM250.00";
+                }else if(dress.equals("Bright Angel")) {
+                    Price = "RM350.00";
+                }else if(dress.equals("Sky Castle")) {
+                    Price = "RM250.00";
+                }else if(dress.equals("Royal Gown")) {
+                    Price = "RM550.00";
+                }else{
+                    Price = "RM0.00";
+                }
+
+
+                rentalDressData.setPrice(Price);
+
                 mydressreff.setValue(rentalDressData);
 
                 name = getName.getText().toString();
@@ -107,7 +137,6 @@ public class RentalFormDress extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(RentalFormDress.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(RentalFormDress.this,"Order submitted!", Toast.LENGTH_LONG).show();
                     finish();
                     startActivity(new Intent(RentalFormDress.this, PrintReceipt.class));
                 }

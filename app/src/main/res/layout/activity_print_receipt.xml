@@ -8,6 +8,24 @@
     tools:context=".PrintReceipt">
 
     <TextView
+        android:id="@+id/tv_dressprice"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@drawable/round_bt"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:paddingStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689" />
+
+    <TextView
         android:id="@+id/tv_dressname"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -20,10 +38,10 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="0.594" />
 
     <TextView
         android:id="@+id/tv_fullname"
@@ -38,10 +56,10 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.404" />
+        app:layout_constraintVertical_bias="0.224" />
 
     <TextView
         android:id="@+id/tv_icnum"
@@ -56,10 +74,10 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.318" />
 
     <TextView
         android:id="@+id/tv_phoneNo"
@@ -74,10 +92,10 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.593" />
+        app:layout_constraintVertical_bias="0.406" />
 
     <TextView
         android:id="@+id/tv_address"
@@ -86,7 +104,7 @@
         android:background="@drawable/round_bt"
         android:drawablePadding="16dp"
         android:ems="10"
-        android:hint="Address"
+        android:hint="State"
         android:inputType="textPostalAddress"
         android:padding="16dp"
         android:paddingStart="20dp"
@@ -95,7 +113,7 @@
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/tv_bookingDate"
@@ -109,10 +127,10 @@
         android:paddingStart="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796" />
+        app:layout_constraintVertical_bias="0.782" />
 
     <TextView
         android:id="@+id/textView9"

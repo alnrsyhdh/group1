@@ -22,7 +22,7 @@ public class PrintReceiptShoes extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
     private FirebaseDatabase firebaseDatabase;
-    private TextView disShoes, disName, disIc, disPhone, disAdd, disDate;
+    private TextView disShoes, disName, disIc, disPhone, disAdd, disDate, disPrice;
     private Button backhome;
 
     @Override
@@ -39,6 +39,7 @@ public class PrintReceiptShoes extends AppCompatActivity {
         disPhone = findViewById(R.id.tv_phoneNo);
         disAdd = findViewById(R.id.tv_address);
         disDate = findViewById(R.id.tv_bookingDate);
+        disPrice = findViewById(R.id.tv_shoesprice );
         backhome = findViewById(R.id.btn_homeshoes);
 
         backhome.setOnClickListener(new View.OnClickListener() {
@@ -55,12 +56,13 @@ public class PrintReceiptShoes extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 RentalShoesData rentalShoesData = dataSnapshot.getValue(RentalShoesData.class);
-                disShoes.setText(String.format("Item: %s", rentalShoesData.getCustShoes()));
+                disShoes.setText(String.format("Shoes: %s", rentalShoesData.getCustShoes()));
                 disName.setText(String.format("Full Name: %s", rentalShoesData.getName()));
                 disIc.setText(String.format("IC Number: %s", rentalShoesData.getIcNum()));
                 disPhone.setText(String.format("Phone Number: %s", rentalShoesData.getPhoneNum()));
-                disAdd.setText(String.format("Address: %s", rentalShoesData.getAdd()));
+                disAdd.setText(String.format("City: %s", rentalShoesData.getAdd()));
                 disDate.setText(String.format("Booked Date: %s", rentalShoesData.getDate()));
+                disPrice.setText(String.format("Price: %s", rentalShoesData.getPrice()));
             }
 
             @Override

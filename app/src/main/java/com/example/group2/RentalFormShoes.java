@@ -32,7 +32,7 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
 
     String [] shoes;
     private EditText getName, getIcNum, getPhoneNum, getAdd, getDate;
-    String custShoes, name, IcNum, PhoneNum, Add, Date;
+    String custShoes, name, IcNum, PhoneNum, Add, Date, Price;
     private Button submit, btnDatePicker;;
     private FirebaseDatabase firebaseDatabase;
     private FirebaseAuth firebaseAuth;
@@ -62,13 +62,12 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
 
         shoes = getResources().getStringArray(R.array.shoes_array);
         Spinner s3 = (Spinner) findViewById(R.id.spinner3);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, shoes);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, shoes);
         s3.setAdapter(adapter);
         s3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 int index = arg0.getSelectedItemPosition();
-                Toast.makeText(getBaseContext(),"You have selected item : " + shoes[index], Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -88,6 +87,36 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
                 rentalShoesData.setAdd(getAdd.getText().toString().trim());
                 rentalShoesData.setDate(getDate.getText().toString().trim());
                 rentalShoesData.setCustShoes(s3.getSelectedItem().toString().trim());
+
+
+                String dress = s3.getSelectedItem().toString().trim();
+                if(dress.equals("Cinder Gella")){
+                    Price="RM50.00";
+                }else if(dress.equals("Flower Belle")){
+                    Price="RM100.00";
+                }else if(dress.equals("Classic Smoke")) {
+                    Price = "RM70.00";
+                }else if(dress.equals("Anastasia")) {
+                    Price = "RM50.00";
+                }else if(dress.equals("Classic Swarovski")) {
+                    Price = "RM130.00";
+                }else if(dress.equals("Summer Dior")) {
+                    Price = "RM70.00";
+                }else if(dress.equals("Winter Chanel")) {
+                    Price = "RM80.00";
+                }else if(dress.equals("Fall Prada")) {
+                    Price = "RM70.00";
+                }else if(dress.equals("Classic Gucci")) {
+                    Price = "RM100.00";
+                }else if(dress.equals("Summer Chanel")) {
+                    Price = "RM80.00";
+                }else{
+                    Price = "RM0.00";
+                }
+
+
+                rentalShoesData.setPrice(Price);
+
                 myshoesreff.setValue(rentalShoesData);
 
 
@@ -102,7 +131,6 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
                     Toast.makeText(RentalFormShoes.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(RentalFormShoes.this,"Order submitted!", Toast.LENGTH_LONG).show();
                     finish();
                     startActivity(new Intent(RentalFormShoes.this, PrintReceiptShoes.class));
                 }
@@ -150,7 +178,8 @@ public class RentalFormShoes extends AppCompatActivity implements View.OnClickLi
                 .setContentText("Thank you for your booking! Your shoes is successfully booked.");
 
         Intent notificationIntent = new Intent(this, MenuProfile.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
+                PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(contentIntent);
         NotificationManager manager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
         manager.notify(0, builder.build());
