@@ -76,3 +76,4 @@ public class SuitAdapter extends RecyclerView.Adapter<SuitAdapter.ViewHolder>{
         }
     }
 }
+

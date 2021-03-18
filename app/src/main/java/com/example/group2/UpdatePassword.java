@@ -15,12 +15,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class                UpdatePassword extends AppCompatActivity {
+public class UpdatePassword extends AppCompatActivity {
 
     private Button update;
     private EditText newPassword;
     private FirebaseUser firebaseUser;
     private FirebaseAuth firebaseAuth;
+    private String userPasswordNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,19 +41,29 @@ public class                UpdatePassword extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String userPasswordNew = newPassword.getText().toString();
+                userPasswordNew = newPassword.getText().toString();
+                int a = userPasswordNew.length();
 
-                firebaseUser.updatePassword(userPasswordNew).addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        if(task.isSuccessful()){
-                            Toast.makeText(UpdatePassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
-                            finish();
-                        }else{
-                            Toast.makeText(UpdatePassword.this, "Password Update Failed!!", Toast.LENGTH_SHORT).show();
+                if(userPasswordNew.isEmpty()){
+                    Toast.makeText(UpdatePassword.this, "Please enter all the details again", Toast.LENGTH_SHORT).show();
+                }else if(a<6){
+                    Toast.makeText(UpdatePassword.this, "Please enter password that have more than 6 character!", Toast.LENGTH_SHORT).show();
+                }else{
+                    firebaseUser.updatePassword(userPasswordNew).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(UpdatePassword.this, "Password Changed", Toast.LENGTH_SHORT).show();
+                                finish();
+                            }else{
+                                Toast.makeText(UpdatePassword.this, "Password Update Failed!!", Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+                }
+
+
+
             }
         });
 
@@ -70,3 +81,4 @@ public class                UpdatePassword extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 }
+
